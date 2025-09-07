@@ -23,7 +23,7 @@ module "ec2_instance" {
 
 # Call S3 Module
 module "storage" {
-  source            = "./modules/s3"
+  source            = "./modules/s3bucket"
   bucket_name       = "misba-terraform-demo-bucket"
   versioning_enabled = true
 }
