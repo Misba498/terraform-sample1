@@ -20,3 +20,10 @@ module "ec2_instance" {
   vpc_id        = module.network.vpc_id
   instance_name = "Misba-EC2"
 }
+
+# Call S3 Module
+module "storage" {
+  source            = "./modules/s3"
+  bucket_name       = "misba-terraform-demo-bucket"
+  versioning_enabled = true
+}
